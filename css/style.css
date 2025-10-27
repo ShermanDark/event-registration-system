@@ -1,0 +1,299 @@
+/* =========================================
+   🌑 RESET Y BASE
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #0f3327);
+  color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* =========================================
+   🧭 HEADER / NAVBAR
+========================================= */
+.header {
+  width: 100%;
+  background: rgba(15, 15, 15, 0.9);
+  border-bottom: 1px solid #0f3327;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #00b37e;
+  line-height: 1;
+}
+
+.logo span {
+  color: #0de38a;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e0e0e0;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00b37e;
+}
+
+/* =========================================
+   🏠 HERO / LANDING
+========================================= */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #00b37e;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #dcdcdc;
+  margin-bottom: 2rem;
+}
+
+.btn-hero {
+  background: linear-gradient(90deg, #00b37e, #0de38a);
+  color: #111;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-hero:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #0de38a, #00b37e);
+}
+
+/* =========================================
+   🎟️ SECCIÓN EVENTOS
+========================================= */
+.eventos {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.eventos h2 {
+  color: #00b37e;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.card {
+  background: #121212;
+  border: 1px solid #0f3327;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 179, 126, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 179, 126, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  color: #0de38a;
+  margin: 1rem;
+}
+
+.card p {
+  margin: 0 1rem 1.5rem;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.btn-ticket {
+  display: block;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(90deg, #00b37e, #0de38a);
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  color: #111;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-ticket:hover {
+  background: linear-gradient(90deg, #0de38a, #00b37e);
+  transform: scale(1.05);
+}
+
+/* =========================================
+   📋 FORMULARIOS
+========================================= */
+main.main-content {
+  display: block; 
+  width: 100%;
+}
+
+main.form-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  padding: 0 1rem;
+}
+
+
+.form-section {
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  background: #121212;
+  border: 1px solid #0f3327;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 179, 126, 0.2);
+  padding: 2.5rem 2rem;
+}
+
+.form-section h1 {
+  color: #00b37e;
+  margin-bottom: 1rem;
+}
+
+.form-section p {
+  color: #bfbfbf;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #0f3327;
+  border-radius: 8px;
+  background: #1b1b1b;
+  color: #eaeaea;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #00b37e;
+  box-shadow: 0 0 8px rgba(0, 179, 126, 0.4);
+}
+
+.btn-submit {
+  width: 60%;
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #00b37e, #0de38a);
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #0de38a, #00b37e);
+}
+
+.form-section .alt-option {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.form-section .alt-option a {
+  color: #0de38a;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.form-section .alt-option a:hover {
+  color: #00b37e;
+}
+
+/* =========================================
+   🦶 FOOTER
+========================================= */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #0f3327;
+  background: #0a0a0a;
+  color: #aaa;
+}
+
+.footer strong {
+  color: #00b37e;
+}
