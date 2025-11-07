@@ -7,19 +7,23 @@
     <meta name="description"
         content="Formulario de registro para nuevos usuarios en el sistema de organización de eventos tecnológicos.">
     <title>Registro | Bootcamps Tech</title>
-    <<link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../img/logo.png" type="image/png">
+    <script src="../js/classes.js" defer></script>
+    <script src="../js/utils.js" defer></script>
+    <script src="../js/main.js" defer></script>
+
+
 </head>
 
 <body>
     <header class="navbar">
-        <div class="logo">TechBootcamps</div>
+        <a href="../index.html" class="logo">BootcampTech</a>
         <nav>
             <ul class="nav-links">
-                <li><a href="../index.html#bootcamps">Bootcamps</a></li>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="eventos.html">Mis Eventos</a></li>
                 <li><a href="registro.html">Registro</a></li>
+                <li class="login-item"><a href="login.html" id="login-link">Iniciar sesión</a></li>
             </ul>
         </nav>
     </header>
@@ -58,11 +62,10 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Bootcamps Tech. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <p>© 2025 <strong>Alexander Navas</strong> — Sistema de Organización de Eventos</p>
     </footer>
 
-    <script src="../js/auth.js"></script>
 </body>
 
 </html>

@@ -9,18 +9,22 @@
     <meta name="author" content="Alexander Navas" />
     <title>Bootcamps Tech | Sistema de Organización de Eventos</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/classes.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+
 </head>
 
 <body>
     <!-- ====== HEADER / NAVBAR ====== -->
     <header class="navbar">
-        <div class="logo">TechBootcamps</div>
+        <a href="index.html" class="logo">BootcampTech</a>
         <nav>
             <ul class="nav-links">
-                <li><a href="#bootcamps">Bootcamps</a></li>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/login.html">Login</a></li>
+                <li><a href="pages/eventos.html">Mis Eventos</a></li>
                 <li><a href="pages/registro.html">Registro</a></li>
+                <li class="login-item"><a href="pages/login.html" id="login-link">Iniciar sesión</a></li>
             </ul>
         </nav>
     </header>
@@ -32,7 +36,6 @@
             <p>Capacítate en las áreas más demandadas del sector tech: programación, análisis de datos, Power BI, SQL,
                 POO,
                 y mucho más.</p>
-            <button class="btn-hero">Ver Próximos Eventos</button>
         </section>
 
         <!-- ====== SECCIÓN DE EVENTOS ====== -->
@@ -41,7 +44,7 @@
 
             <div class="cards-container">
                 <article class="card">
-                    <img src="img/javascript.jpg" alt="Bootcamp de JavaScript" />
+                    <img src="img/javascript.webp" alt="Bootcamp de JavaScript" />
                     <h3>Bootcamp de JavaScript</h3>
                     <p>Domina la base del desarrollo web moderno. Desde los fundamentos hasta la manipulación avanzada
                         del
@@ -50,14 +53,14 @@
                 </article>
 
                 <article class="card">
-                    <img src="img/python.jpg" alt="Bootcamp de Python" />
+                    <img src="img/python.webp" alt="Bootcamp de Python" />
                     <h3>Bootcamp de Python</h3>
                     <p>Aprende el lenguaje más versátil para ciencia de datos, automatización y desarrollo backend.</p>
                     <button class="btn-ticket">Obtener Ticket</button>
                 </article>
 
                 <article class="card">
-                    <img src="img/powerbi.jpg" alt="Bootcamp de Power BI" />
+                    <img src="img/powerbi.webp" alt="Bootcamp de Power BI" />
                     <h3>Bootcamp de Power BI</h3>
                     <p>Conviértete en analista de datos profesional. Aprende a crear dashboards e informes interactivos.
                     </p>
@@ -65,14 +68,14 @@
                 </article>
 
                 <article class="card">
-                    <img src="img/sql.jpg" alt="Bootcamp de SQL" />
+                    <img src="img/sql.webp" alt="Bootcamp de SQL" />
                     <h3>Bootcamp de SQL</h3>
                     <p>Domina las bases de datos relacionales, consultas avanzadas y optimización de datos.</p>
                     <button class="btn-ticket">Obtener Ticket</button>
                 </article>
 
                 <article class="card">
-                    <img src="img/poo.jpg" alt="Bootcamp de POO" />
+                    <img src="img/poo.webp" alt="Bootcamp de POO" />
                     <h3>Bootcamp de POO</h3>
                     <p>Refuerza tus bases en programación estructurada y da el salto al desarrollo profesional con
                         Programación Orientada a Objetos.</p>
@@ -80,7 +83,7 @@
                 </article>
 
                 <article class="card">
-                    <img src="img/excel.jpg" alt="Bootcamp de Excel Avanzado" />
+                    <img src="img/excel.webp" alt="Bootcamp de Excel Avanzado" />
                     <h3>Bootcamp de Excel Avanzado</h3>
                     <p>Domina funciones, automatizaciones y análisis de datos con Excel profesional.</p>
                     <button class="btn-ticket">Obtener Ticket</button>
@@ -95,8 +98,7 @@
             © 2025 <strong>Alexander Navas</strong> — Sistema de Organización de Eventos
         </p>
     </footer>
-
-    <script src="js/main.js"></script>
+    
 </body>
 
 </html>

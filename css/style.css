@@ -8,7 +8,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -20,14 +21,49 @@ body {
   min-height: 100vh;
 }
 
-/* =========================================
-   🧭 HEADER / NAVBAR
-========================================= */
-.header {
-  width: 100%;
-  background: rgba(15, 15, 15, 0.9);
-  border-bottom: 1px solid #0f3327;
+header {
+    width: 100%;
+    background-color: #1a1a1a; 
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); 
 }
+
+
+header .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none; 
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #eaeaea;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
 
 .navbar {
   max-width: 1200px;
@@ -37,6 +73,9 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
@@ -57,6 +96,10 @@ body {
   align-items: center;
 }
 
+.login-item {
+  margin-left: auto;
+}
+
 .nav-links a {
   text-decoration: none;
   color: #e0e0e0;
@@ -67,12 +110,10 @@ body {
   color: #00b37e;
 }
 
-/* =========================================
-   🏠 HERO / LANDING
-========================================= */
+
 .hero {
   text-align: center;
-  padding: 5rem 2rem;
+  padding: 3.5rem 2rem;
   width: 100%;
 }
 
@@ -87,31 +128,12 @@ body {
   margin: auto;
   font-size: 1.1rem;
   color: #dcdcdc;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-.btn-hero {
-  background: linear-gradient(90deg, #00b37e, #0de38a);
-  color: #111;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-hero:hover {
-  transform: scale(1.05);
-  background: linear-gradient(90deg, #0de38a, #00b37e);
-}
-
-/* =========================================
-   🎟️ SECCIÓN EVENTOS
-========================================= */
 .eventos {
   max-width: 1200px;
-  margin: 4rem auto;
+  margin: 1rem auto;
   padding: 2rem;
   width: 100%;
   text-align: center;
@@ -181,11 +203,8 @@ body {
   transform: scale(1.05);
 }
 
-/* =========================================
-   📋 FORMULARIOS
-========================================= */
 main.main-content {
-  display: block; 
+  display: block;
   width: 100%;
 }
 
@@ -197,7 +216,6 @@ main.form-page {
   min-height: calc(100vh - 70px);
   padding: 0 1rem;
 }
-
 
 .form-section {
   width: 100%;
@@ -283,9 +301,6 @@ main.form-page {
   color: #00b37e;
 }
 
-/* =========================================
-   🦶 FOOTER
-========================================= */
 .footer {
   text-align: center;
   padding: 2rem;

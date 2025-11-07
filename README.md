@@ -75,5 +75,4 @@ Permite a los usuarios **registrarse, visualizar y administrar inscripciones** d
 ## 👨‍💻 Autor
 
 **Alexander Navas**  
-_Estudiante de Desarrollo de Sistemas Front-end y Back-end_  
-Apasionado por el desarrollo web, la experiencia de usuario y la optimización del código.  
+_Estudiante de Desarrollo de Sistemas Front-end y Back-end_   
