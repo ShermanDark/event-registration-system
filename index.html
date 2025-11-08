@@ -9,9 +9,7 @@
     <meta name="author" content="Alexander Navas" />
     <title>Bootcamps Tech | Sistema de Organización de Eventos</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/classes.js" defer></script>
-    <script src="js/utils.js" defer></script>
-    <script src="js/main.js" defer></script>
+    <script src="js/app.js" defer></script>
 
 
 </head>
@@ -23,8 +21,8 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="pages/eventos.html">Mis Eventos</a></li>
-                <li><a href="pages/registro.html">Registro</a></li>
-                <li class="login-item"><a href="pages/login.html" id="login-link">Iniciar sesión</a></li>
+                <li><a href="#" id="modal-registro-link">Registro</a></li>
+                <li class="login-item"><a href="#" id="modal-login-link">Iniciar sesión</a></li>
             </ul>
         </nav>
     </header>
@@ -41,56 +39,57 @@
         <!-- ====== SECCIÓN DE EVENTOS ====== -->
         <section class="eventos">
             <h2>Eventos Disponibles</h2>
-
-            <div class="cards-container">
-                <article class="card">
-                    <img src="img/javascript.webp" alt="Bootcamp de JavaScript" />
-                    <h3>Bootcamp de JavaScript</h3>
-                    <p>Domina la base del desarrollo web moderno. Desde los fundamentos hasta la manipulación avanzada
-                        del
-                        DOM.</p>
-                    <button class="btn-ticket">Obtener Ticket</button>
-                </article>
-
-                <article class="card">
-                    <img src="img/python.webp" alt="Bootcamp de Python" />
-                    <h3>Bootcamp de Python</h3>
-                    <p>Aprende el lenguaje más versátil para ciencia de datos, automatización y desarrollo backend.</p>
-                    <button class="btn-ticket">Obtener Ticket</button>
-                </article>
-
-                <article class="card">
-                    <img src="img/powerbi.webp" alt="Bootcamp de Power BI" />
-                    <h3>Bootcamp de Power BI</h3>
-                    <p>Conviértete en analista de datos profesional. Aprende a crear dashboards e informes interactivos.
-                    </p>
-                    <button class="btn-ticket">Obtener Ticket</button>
-                </article>
-
-                <article class="card">
-                    <img src="img/sql.webp" alt="Bootcamp de SQL" />
-                    <h3>Bootcamp de SQL</h3>
-                    <p>Domina las bases de datos relacionales, consultas avanzadas y optimización de datos.</p>
-                    <button class="btn-ticket">Obtener Ticket</button>
-                </article>
-
-                <article class="card">
-                    <img src="img/poo.webp" alt="Bootcamp de POO" />
-                    <h3>Bootcamp de POO</h3>
-                    <p>Refuerza tus bases en programación estructurada y da el salto al desarrollo profesional con
-                        Programación Orientada a Objetos.</p>
-                    <button class="btn-ticket">Obtener Ticket</button>
-                </article>
-
-                <article class="card">
-                    <img src="img/excel.webp" alt="Bootcamp de Excel Avanzado" />
-                    <h3>Bootcamp de Excel Avanzado</h3>
-                    <p>Domina funciones, automatizaciones y análisis de datos con Excel profesional.</p>
-                    <button class="btn-ticket">Obtener Ticket</button>
-                </article>
+            <div class="cards-container" id="cards-container">
+                <!-- Las cards de eventos se generan dinámicamente -->
             </div>
         </section>
     </main>
+
+    <!-- MODAL REGISTRO -->
+    <div id="modal-registro" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal-registro">&times;</span>
+            <h2>Registro</h2>
+            <form id="form-registro">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar contraseña</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="btn-submit">Registrarme</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL LOGIN -->
+    <div id="modal-login" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal-login">&times;</span>
+            <h2>Iniciar sesión</h2>
+            <form id="form-login">
+                <div class="form-group">
+                    <label for="login-email">Correo electrónico</label>
+                    <input type="email" id="login-email" name="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" name="login-password" required>
+                </div>
+                <button type="submit" class="btn-submit">Entrar</button>
+            </form>
+        </div>
+    </div>
 
     <!-- ====== FOOTER ====== -->
     <footer class="footer">
@@ -98,7 +97,7 @@
             © 2025 <strong>Alexander Navas</strong> — Sistema de Organización de Eventos
         </p>
     </footer>
-    
+
 </body>
 
 </html>
