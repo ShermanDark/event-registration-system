@@ -1,18 +1,25 @@
-// Genera ID único
 function generateId() {
-  return Date.now().toString(36) + Math.random().toString(36).substring(2, 8);
+  const timestamp = Date.now().toString(36);
+  const randomPart = crypto.getRandomValues(new Uint32Array(1))[0].toString(36);
+  return (timestamp + randomPart).slice(0, 12);
 }
 
-// Validaciones
 function validateEmail(email) {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(email);
+  const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return regex.test(email.trim());
 }
 
 function validatePassword(password) {
-  return password.length >= 8;
+  const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_\-+=]).{8,}$/;
+  return regex.test(password);
 }
 
 function validateName(name) {
-  return /^[a-zA-Z\s]+$/.test(name) && name.length >= 3;
+  const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+  return regex.test(name.trim()) && name.trim().length >= 3;
 }
+
+window.generateId = generateId;
+window.validateEmail = validateEmail;
+window.validatePassword = validatePassword;
+window.validateName = validateName;
