@@ -186,19 +186,19 @@ function inicializarEventosPredeterminados() {
         "ev3",
         "Bootcamp Power BI",
         "2025-11-25",
-        "CDMX",
+        "Online",
         "Datos",
-        "presencial",
-        "Sala 1"
+        "online",
+        "meet.com/powerbi"
       ),
       new Evento(
         "ev4",
         "Bootcamp SQL",
         "2025-11-28",
-        "CDMX",
+        "Online",
         "Datos",
-        "presencial",
-        "Sala 2"
+        "online",
+        "meet.com/sql"
       ),
       new Evento(
         "ev5",
@@ -213,12 +213,67 @@ function inicializarEventosPredeterminados() {
         "ev6",
         "Bootcamp Excel Avanzado",
         "2025-12-05",
-        "CDMX",
+        "Online",
         "Datos",
-        "presencial",
-        "Sala 3"
+        "online",
+        "meet.com/excel"
+      ),
+      new Evento(
+        "ev7",
+        "Bootcamp React JS",
+        "2025-12-10",
+        "Online",
+        "Programación",
+        "online",
+        "meet.com/react"
+      ),
+      new Evento(
+        "ev8",
+        "Bootcamp Angular",
+        "2025-12-12",
+        "Online",
+        "Programación",
+        "online",
+        "meet.com/angular"
+      ),
+      new Evento(
+        "ev9",
+        "Bootcamp GitHub",
+        "2025-12-15",
+        "Online",
+        "Herramientas",
+        "online",
+        "meet.com/github"
+      ),
+      new Evento(
+        "ev10",
+        "Bootcamp Ciberseguridad",
+        "2025-12-18",
+        "Online",
+        "Seguridad",
+        "online",
+        "meet.com/ciberseguridad"
+      ),
+      new Evento(
+        "ev11",
+        "Bootcamp MongoDB",
+        "2025-12-20",
+        "Online",
+        "Bases de Datos",
+        "online",
+        "meet.com/mongodb"
+      ),
+      new Evento(
+        "ev12",
+        "Bootcamp Ciencia de Datos",
+        "2025-12-22",
+        "Online",
+        "Datos",
+        "online",
+        "meet.com/ciencia"
       ),
     ];
+
     localStorage.setItem(
       "eventos",
       JSON.stringify(eventos.map((e) => e.toJSON()))
@@ -286,7 +341,9 @@ function renderizarEventosInscritos() {
       <img src="${imgSrc}" alt="${ev.nombre}">
       <h3>${ev.nombre}</h3>
       <p>${ev.descripcion()}</p>
-      <button class="btn-cancelar" data-id="${ev.id}" style="background:#b30000;">
+      <button class="btn-cancelar" data-id="${
+        ev.id
+      }" style="background:#b30000;">
         Cancelar inscripción
       </button>
     `;
